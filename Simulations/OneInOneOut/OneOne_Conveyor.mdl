@@ -2,12 +2,12 @@ Model {
   Name			  "OneOne_Conveyor"
   Version		  8.3
   MdlSubVersion		  0
-  SavedCharacterEncoding  "ISO-8859-1"
+  SavedCharacterEncoding  "windows-1252"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.17"
+    ComputedModelVersion    "1.18"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -30,7 +30,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [44.0, 39.0, 1440.0, 798.0]
+      Location		      [-8.0, -8.0, 1382.0, 744.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -45,7 +45,7 @@ Model {
 	$PropName		"ExplorerBarInfo"
 	$ObjectID		4
 	$ClassName		"Simulink.ExplorerBarInfo"
-	Visible			[0]
+	Visible			[1]
       }
       Object {
 	$PropName		"EditorsInfo"
@@ -54,9 +54,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1406.0, 658.0]
-	ZoomFactor		[0.6]
-	Offset			[-743.173809523809, 110.92619047619041]
+	Extents			[1332.0, 569.0]
+	ZoomFactor		[0.8]
+	Offset			[-177.00714285714184, 16.509523809523529]
       }
     }
   }
@@ -64,11 +64,11 @@ Model {
   Creator		  "obo"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "obo"
+  LastModifiedBy	  "Amogh"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Mar 28 00:11:38 2015"
-  RTWModifiedTimeStamp	  349402261
-  ModelVersionFormat	  "1.%<AutoIncrement:17>"
+  LastModifiedDate	  "Sat Mar 28 20:33:17 2015"
+  RTWModifiedTimeStamp	  349475594
+  ModelVersionFormat	  "1.%<AutoIncrement:18>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -928,7 +928,7 @@ Model {
   }
   System {
     Name		    "OneOne_Conveyor"
-    Location		    [44, 39, 1484, 837]
+    Location		    [-8, -8, 1374, 736]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -940,7 +940,7 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "60"
+    ZoomFactor		    "80"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "168"
     Block {
@@ -1040,7 +1040,7 @@ Model {
       Name		      "Input Scope"
       SID		      "19"
       Ports		      [1]
-      Position		      [175, 724, 205, 756]
+      Position		      [215, 399, 245, 431]
       ZOrder		      80
       Floating		      off
       Location		      [188, 365, 1080, 779]
@@ -1107,7 +1107,7 @@ Model {
       RequestExecContextInheritance off
       System {
 	Name			"InputBin"
-	Location		[0, 22, 1440, 826]
+	Location		[-8, -8, 1374, 736]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1119,7 +1119,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"492"
+	ZoomFactor		"175"
 	Block {
 	  BlockType		  Inport
 	  Name			  "In1"
@@ -1178,7 +1178,7 @@ Model {
       BlockType		      Memory
       Name		      "Memory"
       SID		      "27"
-      Position		      [230, 820, 260, 850]
+      Position		      [55, 520, 85, 550]
       ZOrder		      72
       BlockMirror	      on
     }
@@ -1303,7 +1303,7 @@ Model {
       RequestExecContextInheritance off
       System {
 	Name			"Segment"
-	Location		[1672, 167, 3112, 977]
+	Location		[-8, -8, 1374, 736]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1375,7 +1375,7 @@ Model {
       Name		      "Segment Scope"
       SID		      "156"
       Ports		      [7]
-      Position		      [1215, 19, 1250, 281]
+      Position		      [1220, 24, 1340, 276]
       ZOrder		      125
       Floating		      off
       Location		      [1, 71, 1441, 819]
@@ -1453,35 +1453,34 @@ Model {
       ZOrder		      7
       SrcBlock		      "InputBin"
       SrcPort		      1
-      Points		      [9, 0; 0, 220]
+      Points		      [15, 0]
       Branch {
-	ZOrder			602
-	Points			[0, 105]
-	DstBlock		"Input Scope"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			6
-	Points			[94, 0]
+	ZOrder			632
+	Points			[0, 54; 88, 0]
 	Branch {
-	  ZOrder		  92
-	  Points		  [0, -240]
-	  DstBlock		  "Mux"
-	  DstPort		  1
-	}
-	Branch {
-	  ZOrder		  91
-	  Points		  [72, 0; 0, 200]
+	  ZOrder		  631
+	  Points		  [0, 66]
 	  DstBlock		  "Memory"
 	  DstPort		  1
 	}
+	Branch {
+	  ZOrder		  92
+	  Points		  [0, -74]
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	ZOrder			602
+	DstBlock		"Input Scope"
+	DstPort			1
       }
     }
     Line {
       ZOrder		      8
       SrcBlock		      "Memory"
       SrcPort		      1
-      Points		      [-207, 0; 0, -420]
+      Points		      [-32, 0; 0, -120]
       DstBlock		      "InputBin"
       DstPort		      1
     }
@@ -1593,7 +1592,7 @@ Model {
     }
     Line {
       ZOrder		      395
-      Points		      [1660, 1635; 260, 0; 15, 0]
+      Points		      [1660, 1635; 275, 0]
     }
     Line {
       ZOrder		      593
